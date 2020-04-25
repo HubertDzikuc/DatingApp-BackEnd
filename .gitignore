@@ -7,6 +7,7 @@ nupkg/
 *.db
 obj
 bin
+appsettings.json
 
 # Visual Studio Code
 .vscode
