@@ -8,6 +8,8 @@ nupkg/
 obj
 bin
 appsettings.json
+.db-shm
+.db-wal
 
 # Visual Studio Code
 .vscode
