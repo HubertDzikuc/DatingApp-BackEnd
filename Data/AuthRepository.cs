@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DatingApp.API.Data
 {
-    public class AuthRepositiory : IAuthRepositiory
+    public class AuthRepository : IAuthRepository
     {
         private readonly DataContext _context;
-        public AuthRepositiory(DataContext context)
+        public AuthRepository(DataContext context)
         {
             this._context = context;
         }

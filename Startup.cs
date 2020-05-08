@@ -38,8 +38,8 @@ namespace DatingApp.API
             (Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers().AddNewtonsoftJson();
             services.AddCors();
-            services.AddScoped<IAuthRepositiory, AuthRepositiory>();
-            services.AddScoped<IDatingRepositiory, DatingRepositiory>();
+            services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IDatingRepository, DatingRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options => {
                 options.TokenValidationParameters = new TokenValidationParameters
