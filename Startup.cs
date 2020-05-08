@@ -39,6 +39,7 @@ namespace DatingApp.API
             services.AddControllers();
             services.AddCors();
             services.AddScoped<IAuthRepositiory, AuthRepositiory>();
+            services.AddScoped<IDatingRepositiory, DatingRepositiory>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options => {
                 options.TokenValidationParameters = new TokenValidationParameters
