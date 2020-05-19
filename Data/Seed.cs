@@ -16,7 +16,7 @@ namespace DatingApp.API.Data
                 foreach (var user in users)
                 {
                     byte[] passwordHash, passwordSalt;
-                    CreatePassowrdHash("password",out passwordHash,out passwordSalt);
+                    CreatePasswordHash("password",out passwordHash,out passwordSalt);
 
                     user.PasswordHash = passwordHash;
                     user.PasswordSalt = passwordSalt;
@@ -28,7 +28,7 @@ namespace DatingApp.API.Data
             }
         }
 
-        private static void CreatePassowrdHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
+        private static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
             using(var hmac = new System.Security.Cryptography.HMACSHA512())
             {
